@@ -43,7 +43,7 @@ export function createReelAnimation({ refs }) {
       }
 
       gsap.set(container, {
-        scale: 0.92,
+        scale: 0.5,
         opacity: 0,
         clipPath: clipStart,
         filter: 'none',
@@ -78,6 +78,7 @@ export function createReelAnimation({ refs }) {
         scrollTrigger: {
           trigger: section,
           start: 'top 95%', // Start earlier so it's fully visible when centered
+          toggleActions: 'play none none reverse',
         },
       })
 
@@ -136,18 +137,7 @@ export function createReelAnimation({ refs }) {
         })
       }
 
-      if (!isMobile) {
-        gsap.to(container, {
-          scale: 0.96,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1,
-          },
-        })
-      }
+
 
       return () => {
         gradientTween?.kill()

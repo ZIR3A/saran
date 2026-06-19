@@ -18,7 +18,7 @@ export default function CaseStudy() {
         phaseCount: caseStudyPhases.length,
         refs: {
           section: sectionRef.current,
-          pin: pinRef.current,
+          pin: sectionRef.current,
           phases: panelRefs.current.filter(Boolean),
           progressFills: gsap.utils.toArray(
             '[data-case-progress]',
@@ -33,7 +33,7 @@ export default function CaseStudy() {
     <SectionShell id="case-study">
       <div ref={sectionRef}>
         <div ref={pinRef} className="md:grid md:grid-cols-2 md:gap-16 lg:gap-20">
-          <aside className="mb-10 md:sticky md:top-0 md:mb-0 md:flex md:h-svh md:flex-col md:justify-center md:py-20">
+          <aside className="mb-10 md:mb-0 md:flex md:h-svh md:flex-col md:justify-center md:py-20">
             <p className="font-mono text-xs uppercase tracking-[0.35em] text-accent">
               Streaming / Content Platform
             </p>

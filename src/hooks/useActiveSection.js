@@ -40,7 +40,7 @@ export function useActiveSection() {
     let trailerInView = true
 
     const syncNavVisibility = () => {
-      setNavVisible(!trailerInView || trailerProgress >= NAV_REVEAL_PROGRESS)
+      setNavVisible(trailerProgress >= NAV_REVEAL_PROGRESS)
     }
 
     const trailer = document.getElementById('trailer')

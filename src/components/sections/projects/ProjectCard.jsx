@@ -1,7 +1,7 @@
 import ProjectImage from './ProjectImage'
 
 export default function ProjectCard({ project, cardRef, index }) {
-  const { id, title, category, description, technologies, contribution, image } = project
+  const { id, title, category, description, technologies, contribution, image, url } = project
 
   // Map project ID to customized ambient glow colors
   const getGlowColor = (projectId) => {
@@ -148,10 +148,12 @@ export default function ProjectCard({ project, cardRef, index }) {
           className="mt-5 opacity-0"
         >
           <a
-            href="#contact"
+            href={url || '#contact'}
+            target={url ? '_blank' : undefined}
+            rel={url ? 'noopener noreferrer' : undefined}
             className="glass-button text-[0.6rem] px-5 py-2 font-mono uppercase tracking-[0.2em] border border-theme/60 text-primary hover:border-accent hover:text-accent transition-colors duration-300"
           >
-            Explore World
+            Explore Live
           </a>
         </div>
       </div>

@@ -8,13 +8,13 @@ export const contactLinks = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/saranbaral',
+    href: 'https://www.linkedin.com/in/saran-baral-708046210/',
     external: true,
   },
   {
     id: 'github',
     label: 'GitHub',
-    href: 'https://github.com/saranbaral',
+    href: 'https://github.com/ZIR3A',
     external: true,
   },
   {

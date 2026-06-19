@@ -116,7 +116,11 @@ export default function Navigation() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block rounded-full px-3.5 py-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-secondary transition-colors duration-300 hover:text-accent md:px-4"
+                      className={
+                        item.variant === 'outline'
+                          ? 'block rounded-full border border-theme/60 px-3.5 py-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-primary transition-colors duration-300 hover:border-accent hover:text-accent md:px-4'
+                          : 'block rounded-full px-3.5 py-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-secondary transition-colors duration-300 hover:text-accent md:px-4'
+                      }
                     >
                       {item.label}
                     </a>
@@ -169,7 +173,11 @@ export default function Navigation() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-sm uppercase tracking-[0.3em] text-primary"
+                    className={
+                      item.variant === 'outline'
+                        ? 'rounded-full border border-theme/60 px-6 py-3 font-mono text-sm uppercase tracking-[0.3em] text-primary transition-colors hover:border-accent hover:text-accent'
+                        : 'font-mono text-sm uppercase tracking-[0.3em] text-primary'
+                    }
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.label}

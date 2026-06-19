@@ -38,7 +38,7 @@ export default function BuildReel() {
           video.pause()
         }
       },
-      { threshold: 0.15, rootMargin: '120px 0px' },
+      { threshold: 0, rootMargin: '400px 0px' },
     )
 
     observer.observe(section)

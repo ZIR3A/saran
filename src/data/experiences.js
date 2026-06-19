@@ -1,44 +1,44 @@
 export const experiences = [
   {
     id: 'streaming',
-    title: 'Streaming & Content Platform',
+    title: 'Project / Web Application Experience',
     category: 'Digital Product Experience',
     role: [
       'Frontend Engineering',
-      'Product Development',
-      'Experience Design',
+      'Full Stack Development',
+      'User Experience Design',
     ],
     description:
-      'Building content-driven experiences with modern interfaces, user journeys and scalable frontend systems.',
+      'Building modern web applications with scalable architectures, intuitive interfaces, and seamless user experiences. Transforming ideas into reliable digital products through clean engineering and thoughtful design.',
     stack: ['React', 'Next.js', 'JavaScript', 'Streaming Technologies'],
-    image: '/images/experiences/streaming.png',
+    image: '/images/selected-experiences/project-web-application.png',
   },
   {
     id: 'learning-ecosystem',
-    title: 'Learning Ecosystem',
-    category: 'Full Stack Platform',
+    title: 'Streaming & Entertainment Platform',
+    category: 'Digital Product Experience',
     role: [
-      'Frontend Architecture',
-      'Dashboard Development',
-      'System Design',
+      'Frontend Engineering',
+      'Media Experience',
+      'Product Development',
     ],
     description:
-      'Creating a complete learning platform with dashboards, payments and progress tracking.',
+      'Creating immersive streaming experiences with content-driven interfaces, discovery journeys, and cinematic interactions. Designing platforms focused on engagement, performance, and next-generation entertainment.',
     stack: ['Next.js', 'MongoDB', 'SSR', 'ISR'],
-    image: '/images/experiences/lms.png',
+    image: '/images/selected-experiences/streaming-platform.png',
   },
   {
     id: 'commerce',
-    title: 'Commerce Experiences',
-    category: 'E-Commerce Systems',
+    title: 'AI / Future Technology',
+    category: 'Digital Product Experience',
     role: [
-      'Frontend Development',
-      'UI Engineering',
-      'Performance Optimization',
+      'AI Integration',
+      'Automation Systems',
+      'Future Experiences',
     ],
     description:
-      'Building modern shopping experiences with responsive interfaces and interactive user journeys.',
+      'Exploring intelligent technologies to build future-ready digital experiences. Combining AI, automation, and modern engineering to create smarter products and innovative solutions.',
     stack: ['Next.js', 'Tailwind CSS', 'Animations'],
-    image: '/images/experiences/commerce.png',
+    image: '/images/selected-experiences/ai-future.png',
   },
 ]

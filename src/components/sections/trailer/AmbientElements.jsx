@@ -27,7 +27,7 @@ export default function AmbientElements({ ambientRef }) {
         </span>
       ))}
 
-      <div className="trailer-stack-rail absolute bottom-10 left-1/2 hidden -translate-x-1/2 items-center gap-3 md:flex">
+      <div className="trailer-stack-rail absolute bottom-20 left-1/2 hidden -translate-x-1/2 items-center gap-3 md:flex">
         {STACK.map((item, index) => (
           <span key={item} className="flex items-center gap-3">
             {index > 0 && (
