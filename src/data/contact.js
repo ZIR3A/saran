@@ -23,4 +23,10 @@ export const contactLinks = [
     href: '/resume/Saran%20Baral.pdf',
     external: true,
   },
+  {
+    id: 'phone',
+    label: '+977 9817178937',
+    href: 'tel:+9779817178937',
+    external: true,
+  },
 ]
