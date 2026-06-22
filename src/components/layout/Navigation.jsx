@@ -118,7 +118,7 @@ export default function Navigation() {
             : 'pointer-events-none opacity-0',
         ].join(' ')}
       >
-        <div className="flex items-center justify-between px-4 py-4 md:px-8 md:py-5">
+        <div className="relative z-[60] flex items-center justify-between px-4 py-4 md:px-8 md:py-5">
           <button
             type="button"
             onClick={handleLogoClick}
@@ -171,7 +171,7 @@ export default function Navigation() {
               <span
                 className={[
                   'h-px w-5 bg-primary transition-transform duration-300',
-                  menuOpen ? 'translate-y-[5px] rotate-45' : '',
+                  menuOpen ? 'translate-y-[7px] rotate-45' : '',
                 ].join(' ')}
               />
               <span
@@ -183,7 +183,7 @@ export default function Navigation() {
               <span
                 className={[
                   'h-px w-5 bg-primary transition-transform duration-300',
-                  menuOpen ? '-translate-y-[5px] -rotate-45' : '',
+                  menuOpen ? '-translate-y-[7px] -rotate-45' : '',
                 ].join(' ')}
               />
             </button>
