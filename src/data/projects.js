@@ -117,4 +117,21 @@ export const projects = [
     ],
     image: '/images/projects/smart-home-interior.png',
   },
+  {
+    id: 'brand-tau-ochre',
+    title: 'Brand System Architecture',
+    url: 'https://brand-tau-ochre.vercel.app/',
+    category: 'Brand Engineering',
+    tier: 'Interactive Marketing Showcase',
+    description:
+      'A premium, motion-driven interactive brand design system showcasing production-grade web assets and modular design principles.',
+    technologies: ['React', 'GSAP', 'Tailwind CSS', 'Vite'],
+    contribution: [
+      'Interactive Brand Development',
+      'Fluid Grid Layout Engineering',
+      'Advanced Animation Orchestration',
+      'Cross-Browser Asset Optimization',
+    ],
+    image: '/images/projects/brand.png',
+  },
 ]
