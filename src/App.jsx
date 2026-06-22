@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import CinematicEnvironment from './components/layout/CinematicEnvironment'
 import Navigation from './components/layout/Navigation'
 import TrailerSection from './components/sections/TrailerSection'
@@ -60,6 +61,8 @@ export default function App() {
         <Projects />
         <Contact />
       </main>
+
+      <Analytics />
     </>
   )
 }
