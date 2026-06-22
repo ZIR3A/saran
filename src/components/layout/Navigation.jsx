@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import { gsap, ScrollTrigger } from '../animations/gsap'
 import { navItems } from '../../data/navigation'
 import { scrollToTarget, setSmoothScrollPaused } from '../animations/smoothScroll'
 import { useActiveSection } from '../../hooks/useActiveSection'
@@ -37,6 +39,29 @@ function NavItemButton({ item, isActive, onNavigate }) {
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { navActiveId, navVisible } = useActiveSection()
+  const headerRef = useRef(null)
+
+  useGSAP(() => {
+    if (!headerRef.current) return
+
+    const st = ScrollTrigger.create({
+      start: 0,
+      end: 'max',
+      onUpdate: (self) => {
+        if (menuOpen) return
+        
+        if (self.direction === 1 && self.delta > 2) {
+          // Scroll down - hide
+          gsap.to(headerRef.current, { yPercent: -100, duration: 0.3, ease: 'power2.out' })
+        } else if (self.direction === -1 && self.delta < -10) {
+          // Scroll up - reveal
+          gsap.to(headerRef.current, { yPercent: 0, duration: 0.3, ease: 'power2.out' })
+        }
+      }
+    })
+
+    return () => st.kill()
+  }, [menuOpen])
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -85,11 +110,12 @@ export default function Navigation() {
       )}
 
       <header
+        ref={headerRef}
         className={[
-          'fixed inset-x-0 top-0 z-50 transition-all duration-700 ease-out',
+          'fixed inset-x-0 top-0 z-50 transition-opacity duration-700 ease-out',
           navVisible
-            ? 'pointer-events-auto translate-y-0 opacity-100'
-            : 'pointer-events-none -translate-y-4 opacity-0',
+            ? 'pointer-events-auto opacity-100'
+            : 'pointer-events-none opacity-0',
         ].join(' ')}
       >
         <div className="flex items-center justify-between px-4 py-4 md:px-8 md:py-5">
@@ -118,7 +144,7 @@ export default function Navigation() {
                       rel="noopener noreferrer"
                       className={
                         item.variant === 'outline'
-                          ? 'block rounded-full border border-theme/60 px-3.5 py-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-primary transition-colors duration-300 hover:border-accent hover:text-accent md:px-4'
+                          ? 'block rounded-full border border-theme/60 px-3.5 py-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-primary transition-colors duration-300 hover:border-accent hover:text-accent md:px-4 !pointer-events-auto relative z-[9999]'
                           : 'block rounded-full px-3.5 py-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-secondary transition-colors duration-300 hover:text-accent md:px-4'
                       }
                     >
@@ -175,7 +201,7 @@ export default function Navigation() {
                     rel="noopener noreferrer"
                     className={
                       item.variant === 'outline'
-                        ? 'rounded-full border border-theme/60 px-6 py-3 font-mono text-sm uppercase tracking-[0.3em] text-primary transition-colors hover:border-accent hover:text-accent'
+                        ? 'rounded-full border border-theme/60 px-6 py-3 font-mono text-sm uppercase tracking-[0.3em] text-primary transition-colors hover:border-accent hover:text-accent !pointer-events-auto relative z-[9999]'
                         : 'font-mono text-sm uppercase tracking-[0.3em] text-primary'
                     }
                     onClick={() => setMenuOpen(false)}

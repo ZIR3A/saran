@@ -3,8 +3,7 @@ export default function JourneyCard({ stage, year, title, description, index }) 
     <article
       data-journey-stage
       data-stage-index={index}
-      className="glass-card absolute inset-0 flex transform-gpu flex-col justify-center p-6 will-change-[transform,opacity] md:p-10"
-      style={{ zIndex: index }}
+      className="glass-card relative flex transform-gpu flex-col justify-center p-6 will-change-[transform,opacity] md:p-10 mb-8 last:mb-0"
     >
       <div className="mb-6 flex items-baseline gap-4">
         <span className="font-mono text-xs tracking-[0.3em] text-accent">

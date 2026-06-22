@@ -4,17 +4,17 @@ export const caseStudyPhases = [
     stage: '01',
     label: 'Challenge',
     content:
-      'Creating a smooth and scalable content experience for users consuming digital media.',
+      'The client\'s original media platform suffered from high user drop-off due to slow content load times and disruptive layout shifts, directly impacting ad revenue.',
   },
   {
     id: 'approach',
     stage: '02',
     label: 'Approach',
     items: [
-      'Component-driven architecture',
-      'Reusable UI systems',
-      'Performance-focused rendering',
-      'Responsive experience',
+      'Component-driven modular design to speed up future feature deployments',
+      'ISR-based content delivery for instant updates with zero server strain',
+      'Performance-first rendering strategy targeting Core Web Vitals thresholds',
+      'Responsive, layout-shift-free experience across all viewports',
     ],
   },
   {
@@ -33,6 +33,6 @@ export const caseStudyPhases = [
     stage: '04',
     label: 'Result',
     content:
-      'Delivered a scalable experience designed for future growth.',
+      'Engineered a component-driven architecture using Next.js Incremental Static Regeneration (ISR), delivering instant content updates with zero server strain and eliminating layout shifts.',
   },
 ]

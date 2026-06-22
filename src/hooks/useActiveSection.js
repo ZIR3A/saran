@@ -24,7 +24,7 @@ const SECTION_IDS = [
   'contact',
 ]
 
-const NAV_REVEAL_PROGRESS = 0.88
+const NAV_REVEAL_PROGRESS = 0.30
 
 /**
  * Tracks the active portfolio section and trailer nav visibility.

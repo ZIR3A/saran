@@ -4,7 +4,7 @@ import { gsap, useGSAP } from '../animations/gsap'
 import { createContactAnimation } from '../animations/contactAnimation'
 import SocialActions from '../ui/SocialActions'
 
-const TITLE_WORDS = ['Connect', 'With', 'The', 'Builder']
+const TITLE_WORDS = ["Let's", 'Build', 'Something', 'Meaningful']
 
 export default function Contact() {
   const sectionRef = useRef(null)
@@ -47,8 +47,7 @@ export default function Contact() {
             ref={supportRef}
             className="mx-auto mt-6 max-w-xl text-[clamp(0.9rem,2vw,1.1rem)] leading-relaxed text-secondary md:mt-8"
           >
-            Open to building digital experiences, scalable systems and innovative
-            products.
+            Whether you're launching a product, improving an existing platform, or exploring innovative ideas, I'm always open to discussing the next challenge.
           </p>
 
           <div ref={actionsRef}>
@@ -60,7 +59,7 @@ export default function Contact() {
           </div>
 
           <p className="mt-16 font-mono text-[0.6rem] uppercase tracking-[0.35em] text-secondary/60">
-            Saran Baral · Frontend Engineer · 2026
+            Saran Baral · Product Engineer · 2026
           </p>
         </div>
       </div>

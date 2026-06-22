@@ -30,7 +30,7 @@ export default function EngineeringHighlights() {
             Engineering Highlights
           </h2>
           <p className="mt-4 text-[clamp(0.9rem,2vw,1.05rem)] leading-relaxed text-secondary">
-            The principles and practices behind the systems I build.
+            The engineering principles and product mindsets that guide every system, interface, and experience I build.
           </p>
         </header>
 

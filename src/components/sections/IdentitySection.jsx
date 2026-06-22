@@ -6,7 +6,7 @@ import { createIdentityAnimation } from '../animations/identityAnimation'
 const STATEMENT_LINES = [
   { words: ['I', "don't", 'just', 'build'], accent: false },
   { words: ['interfaces.'], accent: false },
-  { words: ['I', 'build'], accent: false },
+  { words: ['I', 'architect'], accent: false },
   { words: ['digital', 'systems.'], accent: true },
 ]
 
@@ -67,8 +67,7 @@ export default function IdentitySection({ behind = false }) {
             data-identity-support
             className="mt-10 max-w-xl text-[clamp(0.9rem,2vw,1.1rem)] leading-relaxed text-secondary md:mt-14"
           >
-            Frontend Engineer creating scalable digital experiences with modern
-            web technologies.
+            I architect digital systems that transform ideas into scalable, user-focused experiences through systems thinking and engineering craftsmanship.
           </p>
         </div>
       </div>

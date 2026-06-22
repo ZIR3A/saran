@@ -6,7 +6,7 @@ import { refreshScroll } from '../animations/scroll'
 import { scrollToTarget } from '../animations/smoothScroll'
 import ReelPlaceholder from './reel/ReelPlaceholder'
 
-const TITLE_WORDS = ['Digital', 'Experiences', 'In', 'Motion']
+const TITLE_WORDS = ['Digital', 'Products', 'In', 'Motion']
 const VIDEO_SRC = '/videos/video.mp4'
 
 export default function BuildReel() {
@@ -122,7 +122,7 @@ export default function BuildReel() {
                 ref={supportRef}
                 className="mt-4 max-w-lg text-[clamp(0.85rem,1.8vw,1.05rem)] leading-relaxed text-secondary md:mt-5"
               >
-                A glimpse of systems, interfaces and experiences I have built.
+                A collection of digital products, interfaces, and interactive experiences crafted through design thinking, engineering precision, and attention to detail.
               </p>
 
               <a

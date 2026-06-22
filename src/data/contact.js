@@ -2,7 +2,7 @@ export const contactLinks = [
   {
     id: 'email',
     label: 'Email',
-    href: 'mailto:saranbaral35@gmail.com',
+    href: 'mailto:saranbrl35@gmail.com',
     external: false,
   },
   {

@@ -18,7 +18,11 @@ export default function SocialActions({
         <a
           key={link.id}
           href={link.href}
-          className="glass-button will-change-transform"
+          className={
+            link.id === 'resume'
+              ? 'glass-button will-change-transform !pointer-events-auto relative z-[9999]'
+              : 'glass-button will-change-transform !pointer-events-auto relative z-[9999]'
+          }
           {...(animate ? { 'data-social-action': true } : {})}
           {...(link.external
             ? { target: '_blank', rel: 'noopener noreferrer' }

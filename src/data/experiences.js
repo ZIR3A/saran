@@ -1,21 +1,21 @@
 export const experiences = [
   {
     id: 'streaming',
-    title: 'Project / Web Application Experience',
+    title: 'Project & Web Application Experience',
     category: 'Digital Product Experience',
     role: [
-      'Frontend Engineering',
+      'Product Engineering',
       'Full Stack Development',
       'User Experience Design',
     ],
     description:
-      'Building modern web applications with scalable architectures, intuitive interfaces, and seamless user experiences. Transforming ideas into reliable digital products through clean engineering and thoughtful design.',
+      'Designed and developed full-scale web applications, dashboards, and business platforms with a focus on performance, usability, and scalable architecture.',
     stack: ['React', 'Next.js', 'JavaScript', 'Streaming Technologies'],
     image: '/images/selected-experiences/project-web-application.png',
   },
   {
     id: 'learning-ecosystem',
-    title: 'Streaming & Entertainment Platform',
+    title: 'Streaming & Entertainment Platforms',
     category: 'Digital Product Experience',
     role: [
       'Frontend Engineering',
@@ -23,13 +23,13 @@ export const experiences = [
       'Product Development',
     ],
     description:
-      'Creating immersive streaming experiences with content-driven interfaces, discovery journeys, and cinematic interactions. Designing platforms focused on engagement, performance, and next-generation entertainment.',
+      'Built modern streaming and content delivery experiences featuring responsive interfaces, content discovery systems, and engaging viewing journeys.',
     stack: ['Next.js', 'MongoDB', 'SSR', 'ISR'],
     image: '/images/selected-experiences/streaming-platform.png',
   },
   {
     id: 'commerce',
-    title: 'AI / Future Technology',
+    title: 'AI & Future Technology',
     category: 'Digital Product Experience',
     role: [
       'AI Integration',
@@ -37,7 +37,7 @@ export const experiences = [
       'Future Experiences',
     ],
     description:
-      'Exploring intelligent technologies to build future-ready digital experiences. Combining AI, automation, and modern engineering to create smarter products and innovative solutions.',
+      'Experimented with AI-powered solutions, intelligent workflows, and next-generation digital experiences that bridge emerging technologies with real-world applications.',
     stack: ['Next.js', 'Tailwind CSS', 'Animations'],
     image: '/images/selected-experiences/ai-future.png',
   },

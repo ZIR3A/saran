@@ -30,8 +30,7 @@ export default function SelectedExperiences() {
             Selected Experiences
           </h2>
           <p className="mt-4 text-[clamp(0.9rem,2vw,1.05rem)] leading-relaxed text-secondary">
-            A collection of systems and digital products I helped design and
-            build.
+            Real-world products, platforms, and systems built across streaming, web applications, and emerging technology spaces.
           </p>
         </header>
 

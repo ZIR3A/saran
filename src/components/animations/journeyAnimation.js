@@ -1,98 +1,87 @@
-import { gsap, ScrollTrigger } from './gsap'
-import { createJourneySnap } from './scrollSnap'
+import { gsap } from './gsap'
 
 export function createJourneyAnimation({ refs, stageCount }) {
   const { section, pin, stages, progressFills, progressLabels } = refs
 
   if (!section || !pin || !stages?.length) return () => {}
 
-  const mm = gsap.matchMedia()
-  const segments = stageCount - 1
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-  const getStageIndex = (progress) =>
-    Math.min(stageCount - 1, Math.round(progress * segments))
-
-  const setActiveStage = (index, isMobile) => {
-    stages.forEach((stage, i) => {
-      const isActive = i === index
-      gsap.set(stage, {
-        opacity: isActive ? 1 : 0,
-        y: isActive ? 0 : isMobile ? 16 : 24,
-        visibility: isActive ? 'visible' : 'hidden',
-        pointerEvents: isActive ? 'auto' : 'none',
-        zIndex: isActive ? 10 + i : i,
-      })
+  if (reduceMotion) {
+    gsap.set(stages, {
+      opacity: 1, y: 0, visibility: 'visible', pointerEvents: 'auto',
     })
-
-    progressLabels?.forEach((label, i) => {
-      gsap.set(label, { opacity: i === index ? 1 : 0.35 })
-    })
-  }
-
-  const updateProgressFills = (progress) => {
-    progressFills?.forEach((fill, i) => {
-      if (i === 0) {
-        gsap.set(fill, { scaleX: 1 })
-        return
-      }
-
-      const start = (i - 1) / segments
-      const fillAmount = gsap.utils.clamp(0, 1, (progress - start) * segments)
-      gsap.set(fill, { scaleX: fillAmount, transformOrigin: 'left center' })
-    })
-  }
-
-  const syncJourneyState = (progress, isMobile, lastIndexRef) => {
-    const index = getStageIndex(progress)
-    updateProgressFills(progress)
-
-    if (index !== lastIndexRef.current) {
-      setActiveStage(index, isMobile)
-      lastIndexRef.current = index
+    gsap.set(progressLabels, { opacity: 1 })
+    if (progressFills?.length) {
+      gsap.set(progressFills, { scaleX: 1, transformOrigin: 'left center' })
     }
+    return () => {}
   }
 
-  mm.add(
-    {
-      isMobile: '(max-width: 767px)',
-      isDesktop: '(min-width: 768px)',
-      reduceMotion: '(prefers-reduced-motion: reduce)',
-    },
-    (context) => {
-      const { isMobile, reduceMotion } = context.conditions
-      const scrollDistance = isMobile ? `+=${stageCount * 55}%` : `+=${stageCount * 80}%`
-      const lastIndexRef = { current: 0 }
+  // Initial states
+  gsap.set(stages, { y: '100%', visibility: 'hidden', pointerEvents: 'none' })
+  gsap.set(stages[0], { y: '0%', visibility: 'visible', pointerEvents: 'auto' })
 
-      if (reduceMotion) {
-        setActiveStage(0, isMobile)
-        updateProgressFills(0)
-        return
-      }
+  if (progressLabels?.length) {
+    gsap.set(progressLabels, { opacity: 0.35 })
+    gsap.set(progressLabels[0], { opacity: 1 })
+  }
 
-      setActiveStage(0, isMobile)
-      updateProgressFills(0)
+  if (progressFills?.length) {
+    gsap.set(progressFills, { scaleX: 0, transformOrigin: 'left center' })
+    gsap.set(progressFills[0], { scaleX: 1 })
+  }
 
-      ScrollTrigger.create({
-        trigger: section,
-        start: 'top top',
-        end: scrollDistance,
-        pin: pin,
-        scrub: isMobile ? 0.35 : 0.45,
-        anticipatePin: 1,
-        fastScrollEnd: true,
-        invalidateOnRefresh: true,
-        snap: createJourneySnap(stageCount),
-        onUpdate: (self) => syncJourneyState(self.progress, isMobile, lastIndexRef),
-        onEnterBack: () => {
-          lastIndexRef.current = -1
-          syncJourneyState(0, isMobile, lastIndexRef)
-        },
-        onLeave: () => {
-          syncJourneyState(1, isMobile, lastIndexRef)
-        },
-      })
-    },
-  )
+  const playTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: 'top top',
+      end: `+=${window.innerHeight * stageCount}`,
+      pin: pin,
+      scrub: 1,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+    }
+  })
 
-  return () => mm.revert()
+  stages.forEach((stage, i) => {
+    if (i === 0) return // stage 0 is already visible at the start
+
+    const progressFill = progressFills?.[i]
+    const progressLabel = progressLabels?.[i]
+    const prevLabel = progressLabels?.[i - 1]
+    const prevStage = stages[i - 1]
+
+    playTimeline
+      .to(prevStage, {
+        scale: 0.96,
+        opacity: 0.5,
+        duration: 1,
+        ease: 'power2.inOut'
+      }, `stage${i}`)
+      .to(stage, {
+        y: '0%',
+        visibility: 'visible',
+        pointerEvents: 'auto',
+        duration: 1,
+        ease: 'power2.inOut'
+      }, `stage${i}`)
+
+    if (prevLabel && progressLabel) {
+      playTimeline
+        .to(prevLabel, { opacity: 0.35, duration: 1, ease: 'power2.inOut' }, `stage${i}`)
+        .to(progressLabel, { opacity: 1, duration: 1, ease: 'power2.inOut' }, `stage${i}`)
+    }
+
+    if (progressFill) {
+      playTimeline.to(progressFill, { scaleX: 1, duration: 1, ease: 'none' }, `stage${i}`)
+    }
+  })
+
+  return () => {
+    if (playTimeline.scrollTrigger) {
+      playTimeline.scrollTrigger.kill()
+    }
+    playTimeline.kill()
+  }
 }

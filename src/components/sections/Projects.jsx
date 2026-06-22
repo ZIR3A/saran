@@ -36,8 +36,7 @@ export default function Projects() {
               Project Worlds
             </h2>
             <p className="mt-4 max-w-sm text-[clamp(0.9rem,2vw,1.05rem)] leading-relaxed text-secondary">
-              A collection of applications, interfaces and systems built across
-              different domains.
+              A curated collection of products, platforms, and experimental builds showcasing problem-solving, engineering execution, and user-centered design.
             </p>
             <p
               ref={counterRef}

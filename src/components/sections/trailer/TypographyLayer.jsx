@@ -26,14 +26,14 @@ export default function TypographyLayer({
             data-identity-line
             className="font-mono text-[clamp(0.8rem,2.2vw,1.1rem)] uppercase tracking-[0.35em] text-accent"
           >
-            Frontend Engineer
+            Product Engineer &amp; Digital Experience Builder
           </p>
 
           <p
             data-identity-line
             className="max-w-md text-[clamp(0.85rem,2vw,1.05rem)] tracking-[0.12em] text-secondary"
           >
-            Building Digital Experiences
+            Designing and engineering immersive digital products that combine performance, usability, and modern web technologies.
           </p>
         </div>
       </div>

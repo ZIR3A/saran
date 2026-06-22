@@ -1,7 +1,7 @@
 import ProjectImage from './ProjectImage'
 
 export default function ProjectCard({ project, cardRef, index }) {
-  const { id, title, category, description, technologies, contribution, image, url } = project
+  const { id, title, category, tier, description, technologies, contribution, image, url } = project
 
   // Map project ID to customized ambient glow colors
   const getGlowColor = (projectId) => {
@@ -82,6 +82,11 @@ export default function ProjectCard({ project, cardRef, index }) {
           className="font-mono text-[0.65rem] uppercase tracking-[0.3em] text-accent opacity-0"
         >
           {category}
+          {tier && (
+            <span className="ml-2 inline-block rounded-full border border-accent/30 bg-accent/8 px-2 py-0.5 text-[0.5rem] tracking-[0.25em] text-accent/80">
+              {tier}
+            </span>
+          )}
         </p>
 
         <h3

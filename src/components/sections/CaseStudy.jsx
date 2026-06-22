@@ -35,13 +35,13 @@ export default function CaseStudy() {
         <div ref={pinRef} className="md:grid md:grid-cols-2 md:gap-16 lg:gap-20">
           <aside className="mb-10 md:mb-0 md:flex md:h-svh md:flex-col md:justify-center md:py-20">
             <p className="font-mono text-xs uppercase tracking-[0.35em] text-accent">
-              Streaming / Content Platform
+              Digital Content Platform
             </p>
             <h2 className="mt-4 text-[clamp(1.75rem,4.5vw,3rem)] font-bold uppercase tracking-[0.08em] text-primary">
               Case Study
             </h2>
             <p className="mt-4 max-w-sm text-[clamp(0.9rem,2vw,1.05rem)] leading-relaxed text-secondary">
-              Building digital content experiences.
+              From challenge to delivery—an inside look at the process, decisions, and engineering strategies behind building impactful digital products.
             </p>
 
             <div ref={progressRef} className="mt-8 hidden gap-2 md:flex">
