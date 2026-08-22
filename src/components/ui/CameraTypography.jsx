@@ -36,7 +36,7 @@ export default function CameraTypography({
             data-identity-line
             className="trailer-eyebrow mb-5 font-mono text-[0.62rem] uppercase tracking-[0.42em] text-trailer-muted md:mb-7"
           >
-            Frontend Engineer
+            Software Engineer building products beyond the interface.
           </p>
 
           <h1
@@ -61,7 +61,7 @@ export default function CameraTypography({
               data-identity-line
               className="text-balance text-[clamp(0.95rem,2.1vw,1.12rem)] leading-[1.65] tracking-[0.01em] text-trailer-secondary"
             >
-              Building scalable digital experiences for product teams and modern web platforms.
+              Building production-ready web products, enterprise platforms, streaming experiences, and interactive applications with a focus on architecture, performance, and user experience.
             </p>
 
             <p

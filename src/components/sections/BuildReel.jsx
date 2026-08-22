@@ -120,7 +120,7 @@ export default function BuildReel() {
 
               <p
                 ref={supportRef}
-                className="mt-4 max-w-lg text-[clamp(0.85rem,1.8vw,1.05rem)] leading-relaxed text-secondary md:mt-5"
+                className="mt-4 max-w-lg text-[clamp(0.85rem,1.8vw,1.05rem)] leading-relaxed text-white md:mt-5"
               >
                 A collection of digital products, interfaces, and interactive experiences crafted through design thinking, engineering precision, and attention to detail.
               </p>

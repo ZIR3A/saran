@@ -2,55 +2,90 @@
 // OWNERSHIP ANALYSIS: Managed exclusively by src/data/caseStudy.js per AGENTS.md rules.
 
 export const CASE_STUDY = {
-  title: "Enterprise OTT Ecosystem Refactor",
-  subtitle: "Multi-Platform Streaming Engine & Core CRM Architecture",
+  title: "Building Software Beyond the Interface",
+
+  subtitle:
+    "A practical engineering journey across products, platforms, systems, and experiences",
+
   phases: [
     {
-      id: "phase-01-challenge",
+      id: "phase-01-foundation",
       stage: "01",
-      label: "The Multi-Front Challenge",
-      content: "The client's legacy infrastructure struggled with heavy architectural debt across two environments. First, the public OTT streaming platforms (Web & webOS Smart TV) suffered from high latency and unstable media player playback. Second, their internal administration networks—handling operations across critical Admin, Reseller, ERP, Billing, and Report sub-systems—stalled under rigid, class-based component architectures that couldn't reliably scale to support over 800,000 active global subscribers."
+      label: "From Interfaces to Products",
+
+      content:
+        "My engineering journey began with understanding how interfaces, logic, and user interactions come together to create useful software. Over time, that foundation evolved beyond individual screens and components into complete digital products. I have worked across responsive web experiences, dashboards, e-commerce platforms, learning systems, streaming products, and business applications, with increasing focus on how frontend decisions connect with data, APIs, backend services, performance, and real user requirements."
     },
+
     {
-      id: "phase-02-approach",
+      id: "phase-02-complex-systems",
       stage: "02",
-      label: "Strategic Engineering Pillars",
+      label: "Engineering Complex Systems",
+
       items: [
-        "Migrating all legacy class-based CRM and administration panels to highly performant React functional components.",
-        "Optimizing the core client-side streaming engine (webtv.nettv.com.np) to resolve buffering delays and memory leaks.",
-        "Refactoring bloated style configurations into a unified theme using clean, custom SCSS variables under the latest Bootstrap framework.",
-        "Deploying robust state abstractions to securely manage data pipelines across Admin, Reseller, ERP, and payment report portals."
+        "Built and contributed to production web applications where frontend architecture had to work alongside APIs, databases, authentication, business logic, and operational workflows.",
+
+        "Worked on large-scale streaming and entertainment experiences across web and Smart TV environments, including media playback, content experiences, performance optimization, and supporting business platforms.",
+
+        "Developed enterprise-oriented systems including administration portals, CRM workflows, dashboards, reporting interfaces, and operational tools where maintainability and reliable data flows are essential.",
+
+        "Built product experiences across e-learning, e-commerce, interactive interfaces, and content-driven platforms, adapting architecture and UX decisions to different product requirements.",
+
+        "Worked across both greenfield development and existing systems, balancing new implementation with refactoring, debugging, optimization, and incremental modernization."
       ]
     },
+
     {
-      id: "phase-03-implementation",
+      id: "phase-03-engineering-principles",
       stage: "03",
-      label: "Modern Technology Stack Integration",
-      // Removed Motion Engine entirely and restructured into pure core engineering categories
+      label: "How I Approach Engineering",
+
       groups: [
         {
-          label: "Core Architecture",
-          value: "React 19.2 (Functional Lifecycle Migration), Vite 8, Micro-Frontend Portals"
+          label: "Product Thinking",
+          value:
+            "User Goals · Business Requirements · Practical Solutions"
         },
+
         {
-          label: "Streaming Infrastructure",
-          value: "Video.js Core Player Engine, HLS Streaming Optimization, webOS LG App SDK"
+          label: "Architecture",
+          value:
+            "Modular Systems · Reusable Components · Maintainable Code"
         },
+
         {
-          label: "Design System",
-          value: "Latest Bootstrap Core, Customized Local SCSS Theme Modules, Tailwind Utility Layouts"
+          label: "Performance",
+          value:
+            "Rendering Strategy · Asset Optimization · Runtime Performance"
         },
+
         {
-          label: "Data Management",
-          value: "Asynchronous Edge Caching, Optimized Real-time Reporting Query Modules"
+          label: "Experience",
+          value:
+            "Responsive UI · Interaction Design · Accessibility · Usability"
+        },
+
+        {
+          label: "Engineering Workflow",
+          value:
+            "Debugging · Refactoring · Testing · Deployment · Continuous Improvement"
+        },
+
+        {
+          label: "Modern Development",
+          value:
+            "AI-Assisted Workflows · Automation · Rapid Prototyping · Emerging Technologies"
         }
       ]
     },
+
     {
-      id: "phase-04-result",
+      id: "phase-04-real-world-engineering",
       stage: "04",
-      label: "Quantified Architectural ROI",
-      content: "The complete engineering overhaul delivered massive operational wins. Upgrading the entire billing and management network stabilized database communication for over 800,000 active accounts, cutting interface report generation time by 35%. Migrating the client player mechanics to an optimized Video.js framework on web and smart TV configurations successfully dropped playback buffer dropouts by 40% while maintaining exceptional UI runtime stability."
+      label: "Building for the Real World",
+
+      content:
+        "Real software engineering extends beyond writing features. It involves understanding existing systems, working within technical constraints, solving production problems, making trade-offs, and continuously improving what already exists. My experience has taken me from building interfaces to working across complete product ecosystems, where architecture, performance, usability, data, deployment, and long-term maintainability all have to work together. The goal is not simply to build software that works, but to build software that can evolve."
     }
   ]
 };

@@ -42,7 +42,7 @@ export default function ProjectImage({ title, category, technologies, image }) {
             loading="lazy"
             decoding="async"
             className={[
-              'absolute inset-0 h-full w-full object-contain p-4 md:p-6 lg:p-8 transition-opacity duration-500',
+              'absolute inset-0 h-full w-full object-cover transition-opacity duration-500',
               imageLoaded ? 'opacity-100' : 'opacity-0',
             ].join(' ')}
             onLoad={() => setImageLoaded(true)}

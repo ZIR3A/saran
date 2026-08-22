@@ -1,5 +1,78 @@
 export const projects = [
   {
+    id: 'trading-journal',
+    title: 'Trading Journal',
+    url: 'https://trading-journal-book-keeping.vercel.app/',
+    category: 'FinTech / Productivity Platform',
+    tier: 'Product Platform',
+    description:
+      'A free trading journal for recording trades, analyzing performance, and understanding trading behavior through structured analytics.',
+    technologies: [
+      'Next.js',
+      'React',
+      'JavaScript',
+      'MongoDB',
+      'Tailwind CSS',
+      'shadcn/ui',
+    ],
+    contribution: [
+      'Built the complete trade management and journaling workflow.',
+      'Developed performance analytics and equity curve visualization.',
+      'Implemented calendar-based trade tracking and review.',
+      'Designed reusable UI patterns for public and authenticated experiences.',
+    ],
+    image: '/images/projects/trading-journal.png',
+  },
+
+  {
+    id: 'nyfn-gandaki',
+    title: 'NYFN Gandaki Digital Platform',
+    url: 'https://nyfngandaki.org/',
+    category: 'Organization Management Platform',
+    tier: 'Enterprise Web Platform',
+    description:
+      'A multilingual digital platform combining a public information website with a secure management portal for organizational content, members, committees, and operations.',
+    technologies: [
+      'Next.js',
+      'React',
+      'JavaScript',
+      'PostgreSQL',
+      'Node.js',
+      'Tailwind CSS',
+      'shadcn/ui',
+    ],
+    contribution: [
+      'Built the multilingual public website and administrative platform.',
+      'Developed member, committee, district, and organizational management workflows.',
+      'Implemented member profiles, QR access, sharing, and leadership structures.',
+      'Built SEO, localization, and scalable content architecture.',
+    ],
+    image: '/images/projects/nyfn-gandaki.png',
+  },
+  // {
+  //   id: 'nepal-exports',
+  //   title: 'Nepal Exports',
+  //   url: 'https://nepalexports.vercel.app/',
+  //   category: 'E-Commerce / Business Platform',
+  //   tier: 'Business Platform',
+  //   description:
+  //     'A digital platform focused on presenting Nepali products and connecting local businesses with international customers through a modern web experience.',
+  //   technologies: [
+  //     'Next.js',
+  //     'React',
+  //     'JavaScript',
+  //     'Tailwind CSS',
+  //     'MongoDB',
+  //   ],
+  //   contribution: [
+  //     'Built the responsive product and business-facing web experience.',
+  //     'Developed product discovery and structured content workflows.',
+  //     'Implemented reusable UI components and responsive layouts.',
+  //     'Optimized the platform for performance, usability, and maintainability.',
+  //   ],
+  //   image: '/images/projects/nepal-exports.png',
+  // },
+  {
     id: 'lms',
     title: 'E-Learning Management System',
     url: 'https://lms-chi-six.vercel.app/',

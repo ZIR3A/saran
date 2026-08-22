@@ -1,30 +1,30 @@
 export const highlights = [
   {
-    id: 'product-first-engineering',
-    title: 'Product-First Engineering',
+    id: 'frontend-modernization',
+    title: 'Frontend Modernization',
     description:
-      'Building solutions that align technology decisions with business and user goals.',
-    tags: ['Product Strategy', 'Business Alignment', 'User Outcomes'],
+      'Modernizing legacy interfaces and frontend architectures into maintainable, component-driven applications while preserving existing business requirements and improving the development experience.',
+    tags: ['Legacy Modernization', 'React', 'Component Architecture'],
   },
   {
-    id: 'experience-led-development',
-    title: 'Experience-Led Development',
+    id: 'performance-engineering',
+    title: 'Performance Engineering',
     description:
-      'Creating intuitive, engaging, and performance-focused user experiences.',
-    tags: ['UX Design', 'Performance', 'Interaction Design'],
+      'Treating performance as part of the architecture — from rendering strategy and asset delivery to data flow, caching, streaming behavior, and runtime optimization.',
+    tags: ['Web Performance', 'Rendering', 'Optimization'],
   },
   {
-    id: 'scalable-architecture',
-    title: 'Scalable Architecture',
+    id: 'product-system-architecture',
+    title: 'Product & System Architecture',
     description:
-      'Designing maintainable systems that grow with products and teams.',
-    tags: ['System Design', 'Modular Architecture', 'Maintainability'],
+      'Designing maintainable applications that connect interfaces, APIs, authentication, databases, business workflows, and reusable systems into cohesive products.',
+    tags: ['Architecture', 'APIs', 'Data', 'Maintainability'],
   },
   {
-    id: 'continuous-innovation',
-    title: 'Continuous Innovation',
+    id: 'experience-interaction-engineering',
+    title: 'Experience & Interaction Engineering',
     description:
-      'Exploring emerging technologies, AI-powered workflows, and modern development practices.',
-    tags: ['AI Workflows', 'Emerging Tech', 'Modern Practices'],
+      'Building interfaces where usability, responsiveness, visual hierarchy, animation, and interaction work together to create intuitive digital experiences.',
+    tags: ['UX', 'Interaction Design', 'Motion', 'Responsive UI'],
   },
 ]

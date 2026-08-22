@@ -75,7 +75,7 @@ export default function ProjectCard({ project, cardRef, index }) {
       {/* 4. Content Layer */}
       <div
         data-project-content
-        className="relative z-30 flex flex-1 flex-col justify-start pt-6 pb-2 px-1 md:px-2 md:pt-8"
+        className="relative z-30 flex flex-1 flex-col justify-start pt-6 pb-2 px-4 md:px-6 md:pt-8"
       >
         <p
           data-project-category
